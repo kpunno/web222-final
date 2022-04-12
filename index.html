@@ -1,0 +1,214 @@
+<!--- 
+NAME:  Kristjan Punno 
+ID:    150695211
+EMAIL: kpunno@myseneca.ca
+DATE:  2022-04-12
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- The header is the container for the profile image, profile name, 
+         profile title and contact/resume options -->
+    <header class="grid-1">
+        <div id="g1-item-1">
+            <img src="media/profile.jpg" width="380" height="390">
+        </div>
+        <div id="g1-item-2">
+            <h1 class="profile-name">Kristjan Punno</h1>
+        </div>
+        <div id="g1-item-3">
+            <h1>Software Developer</h1>
+        </div>
+        <div>
+            <h2>
+            <a href="#contact-me">Contact Me</a><a href="media/kristjan-punno-resume.pdf"><i height="20" width="20" class="material-icons-outlined">file_download</i>Resume</a>
+            </h2>
+        </div>
+    </header>
+
+    <!-- About Me and Academic Integrity section here -->
+
+    <section id="about-me" class="main-section">
+        <div>
+            <h2 class="bordered">Academic Integrity / About Me</h2>
+            <p>
+                I am a keen learner, only having recently been exposed to the programming world. 
+                Before pursuing an academic education, I learned the most basics of basics of Python via free coding websites. 
+                I never thought I would be able to accomplish as much as I have in my first year at Seneca. 
+                I look forward to completing my studies, and expanding my skillset.
+            </p>
+            <p><em><span>
+                I declare that my assessment is wholly my own work in accordance with Seneca Academic
+                Policy. No part of this assessment has been copied manually or electronically from any other
+                source (including web sites) except for the information supplied by the WEB222 instructors and /
+                or made available in this assessment for my use. I also declare that no part of this assignment
+                has been distributed to other students.<br><br><u><b></em>Date:</b> 2022-04-11</u>
+            </span></p>
+        </div>
+        <div class="info-list">
+            <h2 class="bordered info-list-head">Basic Information</h2>
+            <p>Age:</p>
+            <p>28</p>
+            <p>Email:</p>
+            <p>kpunno@myseneca.ca</p>
+            <p>Student ID:</p>
+            <p>150695211</p>
+            <p>Professor:</p>
+            <p>Navreet Lehal</p>
+            <p>Section:</p>
+            <p>NEE</p>
+        </div>
+    </section>
+
+    <!-- Education section here -->
+
+    <section id="education" class="main-section">
+        <div>
+            <h2 class="bordered">My Education</h2>
+            <p>Advanced Diploma of Computer Programming and Analysis</p>
+            <p>2022 - 2024 (Expected)</p>
+        </div>
+        <div>
+            <h2 class="bordered">My Expertise</h2>
+            <p>In my endeavours at Seneca College I've had the priveledge of learning multiple programming languages.
+                I am currently honing my skills with C and C++, HTML, JavaScript, CSS and SQL.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact form starts here -->
+
+    <section id="contact-me">
+        <h2 class="bordered">Contact Me</h2>
+        <form id="contact-info" action="https://formspree.io/f/mpzbypoe" onsubmit="hidePayField()" onreset="hidePayField()"  method="POST">
+            <label for="name">Name: <span> *</span></label>
+            <input 
+                id="name"
+                type="text" 
+                placeholder="Name" 
+                required 
+            />
+
+            <label for="email">Email:<span> *</span></label>
+            <input 
+                id="email"
+                type="email" 
+                placeholder="Email" 
+                required 
+            />
+
+            <label for="address">Address:<span> *</span></label>
+            <input
+                id="address"
+                type="text"
+                placeholder="Address"
+                required
+            >
+
+            <label for="city">City: <span> *</span></label>
+            <input 
+                id="city"
+                type="text" 
+                list="cities" 
+                name="city" 
+                placeholder="City" 
+                required
+            >
+            <datalist id="cities">
+                <option value="Toronto"></option>
+                <option value="Victoria"></option>
+                <option value="Charlottetown"></option>
+                <option value="Fredericton"></option>
+                <option value="Quebec City"></option>
+                <option value="Edmonton"></option>
+                <option value="Burlington"></option>
+                <option value="Ottawa"></option>
+                <option value="Halifax"></option>
+                <option value="Scarborough"></option>
+                <option value="Haliburton"></option>
+                <option value="Hamilton"></option>
+            </datalist>
+
+            <label for="pcode">Postal Code: <span> *</span></label>
+            <input 
+                id="pcode"
+                type="text" 
+                name="postal" 
+                placeholder="Postal Code"
+                pattern="[A-Za-z][0-9][A-Za-z][ -]?[0-9][A-Za-z][0-9]$"
+                required
+            />
+
+            <label for="phone">Phone:</label>
+            <input
+                id="phone"
+                type="text"
+                name="phone"
+                placeholder="Phone"
+            >
+            <!-- By default, question is selected
+                 The user can choose to select another button
+                 By ensuring the default, at least one is selected -->
+            <!-- Each radio calls a function to either hide or display the
+                 payscale field -->
+            <label for="question">Question:</label>
+            <input 
+                id="question" 
+                type="radio" 
+                name="subject" 
+                onclick="hidePayField()" 
+                checked
+            >
+            <label for="comment">Comment:</label>
+            <input 
+                id="comment" 
+                type="radio" 
+                name="subject" 
+                onclick="hidePayField()"
+            >
+            <label for="hiring">Hiring:</label>
+            <input 
+                id="hiring" 
+                type="radio" 
+                name="subject" 
+                onclick="revealPayField()"
+            >
+            
+            <!-- Hidden by default, revealed by clicking on "hiring" -->
+            <label for="pay-input" id="pay-label" hidden>Payscale: <span>*</span></label>
+            <input
+                id="pay-input" 
+                type="text"
+                placeholder="$XX.XX"
+                pattern="^[$][0-9][0-9]*[.][0-9]*"
+                hidden
+            >
+            <!-- Hidden by default, revealed by clicking on "hiring"-->
+            <label id="annual-label" for="annual-input" hidden>Is this an annual figure?</label>
+            <input
+                id="annual-input"
+                type="checkbox"
+                hidden
+            >
+
+            <label for="message">Message details: <span>*</span></label>
+            <textarea 
+                id="message" 
+                placeholder="Enter the details of your message!" 
+                required></textarea>
+            <button type="submit" value="Send">Send</button>
+            <button type="reset">Reset</button>
+        </form>
+    </section>
+</body>
+</html>
