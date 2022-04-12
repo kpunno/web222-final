@@ -1,0 +1,280 @@
+/*
+NAME:  Kristjan Punno 
+ID:    150695211
+EMAIL: kpunno@myseneca.ca
+DATE:  2022-04-12
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;800&family=Libre+Baskerville&display=swap');
+
+/* fulfilling document's width */
+body {
+    margin: 0px;
+}
+
+/* border for profile image */
+img {
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+/* specifies font size for name */
+#g1-item-2 {
+    text-shadow: 2px 2px darkgreen;
+    font-size: 28px;
+}
+
+/* header's grid layout */
+.grid-1 {
+    min-height: 200px;
+    display: grid;
+    grid-template-areas: 
+        "img"
+        "name"
+        "title";
+    background-color: #57A773;
+    padding: 10px;
+}
+
+/* stylization with respect to all h1 elements */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    font-family: "EB Garamond";
+    color: white;
+}
+
+/* stylization with respect to all h2 elements */
+h2 {
+    font-size: 26px;
+    text-align: center;
+    font-family: "EB Garamond";
+    color: white;
+}
+
+/* provides alignment for the profile image */
+.grid-1 #g1-item-1 {
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: img;
+}
+
+/* section specific background colour */
+#about-me {
+    background-color: #4a6f8f;
+}
+
+/* section specific background colour */
+#education {
+    background-color: #57A773;
+}
+
+/* stylization with respect to contact-me link, and resume DL */
+a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #6A8EAE;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+/* provides basic spacing for each section */
+section {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 20px;
+}
+
+.profile-name {
+    font-size: 80px;
+    background: linear-gradient(to right, #57A773 10%, #157145 50%, #57a773 90%);
+}
+
+/* a background border for heading elements */
+.bordered {
+    text-shadow: 1px 1px 10px darkgreen;
+    background: linear-gradient(to right, #49936f 2%, #157145 80%, #49936f 95%);
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* for larger viewports, provides a grid display to each section */
+.info-list {
+    display:grid;
+    grid-template-areas:
+        "h2 h2"
+        "name name"
+        "name name";
+}
+
+.info-list-head {
+    grid-area: h2;
+}
+
+#about-me {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 4px;
+}
+
+#education {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 4px;
+}
+
+/* basic spacing for paragraph elements */
+p {
+    margin: 2px;
+    font-size: 20px;
+    font-family: "Libre Baskerville";
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+
+#contact-me {
+    background-color: #4c6b87;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    padding: 20px;
+}
+
+/* font stylization to form labels */
+label {
+    font-family: "Libre Baskerville";
+    font-weight: bold;
+    text-shadow: 1px 1px 6px #1f3242;
+    color: white;
+}
+
+/* span applied to required fields, and honesty quote */
+span {
+    color: rgb(216, 216, 216);
+}
+
+/* for larger viewports, larger font size to form */
+label, 
+input, 
+button, 
+textarea {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+/* basic relative repositioning to ensure label and input is inline */
+input {
+    color: rgb(74, 74, 74);
+    position: relative;
+    bottom: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    top: 8px;
+    width:20px;
+    height:20px;
+    margin-right: auto;
+    margin-left: 2px;
+}
+
+textarea {
+    resize: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(86, 86, 86);
+    height: 200px;
+    font-size: 18px;
+}
+
+i {
+    font-size: 2000px;
+    position: relative;
+    top: 4px;
+}
+
+label:hover {
+    color:antiquewhite;
+}
+
+input {
+    border: 2px solid gray;
+    border-radius: 6px;
+    margin: 2px;
+    padding: 4px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    margin-right: 6px;
+    margin-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    color:antiquewhite;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: #157145;
+    font-weight: bold;
+}
+
+/* making interactive/clickable elements more apparent */
+button:hover {
+    background-color: #10482d;
+    text-shadow: 1px 1px 30px rgb(255, 231, 231);
+}
+a:hover {
+    background-color:#4c6b87;
+    text-shadow: 1px 1px 30px rgb(255, 231, 231);
+}
+
+/* provides minimal reformatting , omitting the >900px window's grid layout */
+@media only screen and (max-width: 900px) {
+
+    input[type="radio"] {
+        top: 0px;
+    }
+
+    /* shrinking form fonts to adhere to smaller area, keeping content inline */
+    label,
+    input,
+    button,
+    textarea {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    /* .info-list from being warped by resizing (especially headings) */
+    .info-list {
+        max-height: 80px;
+    }
+
+    form {
+        min-width: 700px;
+    }
+
+    /* removes the grid display, opting for vertical alignment */
+    section {
+        display: grid;
+    }
+}
+
+
+
+
+
+
